@@ -9,10 +9,30 @@ const makeClientData = () => ({
   cityId: 'any-cityId'
 });
 
+const makeClientsData = () => ([
+  {
+    id: 'any-id',
+    name: 'any-name',
+    gender: 'any-gender',
+    birthDate: MOCK_BIRTH_DATE,
+    age: generateAge(MOCK_BIRTH_DATE),
+    cityId: 'any-cityId'
+  },
+  {
+    id: 'any-id',
+    name: 'any-name',
+    gender: 'any-gender',
+    birthDate: MOCK_BIRTH_DATE,
+    age: generateAge(MOCK_BIRTH_DATE),
+    cityId: 'any-cityId'
+  },
+]);
+
 const makeSutUseCase = (UseCase) => {
   const cityRepositorySpy = new SutRepositorySpy();
   const clientRepositorySpy = new SutRepositorySpy();
   const client = makeClientData();
+  const clients = makeClientsData();
 
   const useCase = new UseCase({
     cityRepository: cityRepositorySpy,
@@ -22,6 +42,7 @@ const makeSutUseCase = (UseCase) => {
   return {
     useCase,
     client,
+    clients,
     cityRepositorySpy,
     clientRepositorySpy,
   }
