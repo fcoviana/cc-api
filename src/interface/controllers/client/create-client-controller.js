@@ -9,9 +9,9 @@ module.exports = class CreateClientController {
   async handle(httpRequest) {
     try {
       const data = httpRequest.body;
-      const taskCreated = await this.createClientUseCase.handle(data);
+      const clientCreated = await this.createClientUseCase.handle(data);
 
-      return HttpResponse.created({ ...taskCreated });
+      return HttpResponse.created({ ...clientCreated });
     } catch (error) {
       return ControllerErros.handle(error);
     }
