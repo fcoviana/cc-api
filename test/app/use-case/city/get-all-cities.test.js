@@ -21,8 +21,8 @@ describe("use-case: get all cities", () => {
 
 
     const citiesList = await useCase.handle();
-    citiesList.forEach(task => {
-      expect(task).toBeInstanceOf(GetAllCitiesOutput);
+    citiesList.forEach(city => {
+      expect(city).toBeInstanceOf(GetAllCitiesOutput);
     });
   });
 
