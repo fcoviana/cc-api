@@ -1,7 +1,6 @@
 require('./bootstrap');
 
-const { CONECTION } = process.env;
 const knexConfig = require('./knexfile.js');
-const knex = require('knex')(knexConfig[CONECTION]);
+const knex = require('knex')(knexConfig.development);
 
 module.exports = knex;
