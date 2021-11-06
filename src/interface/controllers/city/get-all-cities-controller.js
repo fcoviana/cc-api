@@ -1,5 +1,5 @@
 const ControllerErros = require('../controller-erros');
-const HttpResponse = require('../../helppers/http-response');
+const HttpResponse = require('../../helper/http-response');
 
 module.exports = class GetAllCitiesController {
   constructor(getAllCitiesUseCase) {
