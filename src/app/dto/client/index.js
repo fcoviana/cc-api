@@ -3,4 +3,5 @@ module.exports = {
   CreateClientOutput: require('./create-client-output'),
   GetByIdClientInput: require('./get-by-id-client-input'),
   GetByIdClientOutput: require('./get-by-id-client-output'),
+  GetAllClientsOutput: require('./get-all-clients-output'),
 };
